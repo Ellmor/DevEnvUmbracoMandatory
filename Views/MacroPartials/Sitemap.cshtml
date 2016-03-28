@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var home = Model.Content.AncestorsOrSelf(1).First();
+}
+
+@helper Traverse(IPublishedContent node)
+{
+
+    <a class="list-group-item" href="@node.Url">
+        <i class="glyphicon glyphicon-record"></i>
+        @(!String.IsNullOrWhiteSpace(node.GetPropertyValue<string>("pageName")) ? node.GetPropertyValue<string>("pageName") : !String.IsNullOrWhiteSpace(node.GetPropertyValue<string>("pageTitle")) ? node.GetPropertyValue<string>("pageTitle") : node.Name)
+    </a>
+
+    if (node.Children.Any(n => n.TemplateId > 0))
+    {
+            <div class="list-group">
+                @foreach (var n in node.Children.Where(n => n.TemplateId > 0 && !n.GetPropertyValue<bool>("hideFromSitemap")))
+                {
+                    @Traverse(n)
+                }
+            </div>
+    }
+}
+<div class="just-padding container">
+    <div class="list-group list-group-root well">
+        @Traverse(home)
+    </div>
+</div>

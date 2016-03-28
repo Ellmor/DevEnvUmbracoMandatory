@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ArticleItem>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+<div>
+    <div>Title:</div>
+    <div>@Umbraco.Field("articleTitle")</div>
+</div>
+<div>
+    <div>
+        Content:
+    </div>
+    <div>
+        @Umbraco.Field("articleContent")
+    </div>
+</div>
+@if (Model.Content.Parent != null && Model.Content.Level > 2)
+{
+    <a href="@Model.Content.Parent.Url" class="button back-button">Back</a>
+}

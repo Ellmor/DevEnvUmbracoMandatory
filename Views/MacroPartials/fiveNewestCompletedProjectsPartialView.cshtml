@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{ var selection = CurrentPage.AncestorOrSelf(1).Children.Where("DocumentTypeAlias == \"projectsMain\"").First().Children.Where("Visible").Where("projectStatus.Contains(\"9\")").OrderBy("CreateDate desc").Take(5); }
+
+@* Ensure that the Current Page has children *@
+@if (selection.Any())
+{    
+    <dl class="dl-horizontal">        
+        @foreach (var item in selection)
+        {
+            <dt>
+                <p>@item.projectTitle</p>				
+            </dt>
+			<dd>
+				<p><a class="btn btn-default btn-sm" href="@item.Url" role="button">View details &raquo;</a></p>
+			</dd>
+        }
+    </dl>
+}
