@@ -381,6 +381,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\PetaPeco.cs" />
+    <Content Include="App_Code\Repository\Authors.cs" />
+    <Content Include="App_Code\Repository\Books.cs" />
+    <Content Include="App_Code\Models\Author.cs" />
+    <Content Include="App_Code\Models\Book.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
     <Compile Include="ViewModels\ContactForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
