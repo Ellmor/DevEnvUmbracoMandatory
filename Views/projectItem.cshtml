@@ -3,23 +3,29 @@
 @{
     Layout = "Master.cshtml";
 }
-<div>
-    <div>Title:</div>
-    <div> @Umbraco.Field("projectTitle")</div>
-</div>
-<div>
+<div class="container-fluid">
     <div>
-        Content:
+        <div><h4>Title:</h4></div>
+        <div> @Umbraco.Field("projectTitle")</div>
     </div>
     <div>
-        @Umbraco.Field("projectDescription")
+        <div>
+            <h4> Content:</h4>
+        </div>
+        <div>
+            @Umbraco.Field("projectDescription")
+        </div>
     </div>
-</div>
-<div>
     <div>
-        Project Status:
+        <div>
+            <h4> Project Status:</h4>
+        </div>
+        <div>
+            @Umbraco.Field("projectStatus")
+        </div>
     </div>
-    <div>
-        @Umbraco.Field("projectStatus")
-    </div>
+    @if (Model.Content.Parent != null && Model.Content.Level > 2)
+    {
+        <a href="@Model.Content.Parent.Url" class="button back-button">Back</a>
+    }
 </div>

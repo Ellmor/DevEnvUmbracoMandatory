@@ -5816,3 +5816,10 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+/*Master page*/
+body {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
+/*End Master Page*/

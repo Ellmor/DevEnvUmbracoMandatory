@@ -1,18 +1,19 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ProjectsMain>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
-
-@{
-	var selection = CurrentPage.Site().FirstChild("projectsMain").Children("projectItem").Where("Visible").OrderBy("CreateDate desc");
-}
-<ul>
-	@foreach(var item in selection){
-		<li>
-			<a href="@item.Url">@item.Name</a>
-		</li>
-	}
-</ul>
-
+<div class="container-fluid">
+    @{
+        var selection = CurrentPage.Site().FirstChild("projectsMain").Children("projectItem").Where("Visible").OrderBy("CreateDate desc");
+    }
+    <ul>
+        @foreach (var item in selection)
+        {
+            <li>
+                <a href="@item.Url">@item.Name</a>
+            </li>
+        }
+    </ul>
+</div>
