@@ -5823,3 +5823,5 @@ body {
   padding-bottom: 20px; }
 
 /*End Master Page*/
+.field-validation-error {
+  color: red; }
