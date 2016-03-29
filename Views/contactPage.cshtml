@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ContactPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-3 col-md-7 col-md-offset-3 col-sm-12 col-sm-offset-2 col-xs-12">@Html.Action("Index", "ContactFormSurface")</div>
+    </div>
+</div>
