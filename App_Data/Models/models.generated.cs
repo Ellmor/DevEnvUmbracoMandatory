@@ -975,7 +975,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Skills
+		/// skills
 		///</summary>
 		[ImplementPropertyType("skills")]
 		public object Skills
