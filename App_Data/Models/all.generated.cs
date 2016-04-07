@@ -121,24 +121,6 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
-
-		///<summary>
-		/// Header
-		///</summary>
-		[ImplementPropertyType("header")]
-		public string Header
-		{
-			get { return this.GetPropertyValue<string>("header"); }
-		}
-
-		///<summary>
-		/// Main Content
-		///</summary>
-		[ImplementPropertyType("mainContent")]
-		public IHtmlString MainContent
-		{
-			get { return this.GetPropertyValue<IHtmlString>("mainContent"); }
-		}
 	}
 
 	/// <summary>Articles Main</summary>
@@ -164,24 +146,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticlesMain, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Articles Body Text
-		///</summary>
-		[ImplementPropertyType("articlesBodyText")]
-		public IHtmlString ArticlesBodyText
-		{
-			get { return this.GetPropertyValue<IHtmlString>("articlesBodyText"); }
-		}
-
-		///<summary>
-		/// Articles Title
-		///</summary>
-		[ImplementPropertyType("articlesTitle")]
-		public string ArticlesTitle
-		{
-			get { return this.GetPropertyValue<string>("articlesTitle"); }
 		}
 	}
 
@@ -209,24 +173,6 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
-
-		///<summary>
-		/// Article Content
-		///</summary>
-		[ImplementPropertyType("articleContent")]
-		public IHtmlString ArticleContent
-		{
-			get { return this.GetPropertyValue<IHtmlString>("articleContent"); }
-		}
-
-		///<summary>
-		/// Article Title
-		///</summary>
-		[ImplementPropertyType("articleTitle")]
-		public string ArticleTitle
-		{
-			get { return this.GetPropertyValue<string>("articleTitle"); }
-		}
 	}
 
 	/// <summary>Projects Main</summary>
@@ -252,24 +198,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProjectsMain, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Projects Body Text
-		///</summary>
-		[ImplementPropertyType("projectsBodyText")]
-		public IHtmlString ProjectsBodyText
-		{
-			get { return this.GetPropertyValue<IHtmlString>("projectsBodyText"); }
-		}
-
-		///<summary>
-		/// Projects Title
-		///</summary>
-		[ImplementPropertyType("projectsTitle")]
-		public string ProjectsTitle
-		{
-			get { return this.GetPropertyValue<string>("projectsTitle"); }
 		}
 	}
 
@@ -299,30 +227,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Project Description
-		///</summary>
-		[ImplementPropertyType("projectDescription")]
-		public IHtmlString ProjectDescription
-		{
-			get { return this.GetPropertyValue<IHtmlString>("projectDescription"); }
-		}
-
-		///<summary>
 		/// Project Status
 		///</summary>
 		[ImplementPropertyType("projectStatus")]
 		public object ProjectStatus
 		{
 			get { return this.GetPropertyValue("projectStatus"); }
-		}
-
-		///<summary>
-		/// Project Title
-		///</summary>
-		[ImplementPropertyType("projectTitle")]
-		public string ProjectTitle
-		{
-			get { return this.GetPropertyValue<string>("projectTitle"); }
 		}
 	}
 
@@ -352,39 +262,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Footer
-		///</summary>
-		[ImplementPropertyType("footer")]
-		public string Footer
-		{
-			get { return this.GetPropertyValue<string>("footer"); }
-		}
-
-		///<summary>
 		/// Logo
 		///</summary>
 		[ImplementPropertyType("logo")]
 		public object Logo
 		{
 			get { return this.GetPropertyValue("logo"); }
-		}
-
-		///<summary>
-		/// Main Content
-		///</summary>
-		[ImplementPropertyType("mainContent")]
-		public IHtmlString MainContent
-		{
-			get { return this.GetPropertyValue<IHtmlString>("mainContent"); }
-		}
-
-		///<summary>
-		/// Site Title
-		///</summary>
-		[ImplementPropertyType("siteTitle")]
-		public string SiteTitle
-		{
-			get { return this.GetPropertyValue<string>("siteTitle"); }
 		}
 	}
 
@@ -639,15 +522,6 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
-
-		///<summary>
-		/// Contents:
-		///</summary>
-		[ImplementPropertyType("contents")]
-		public object Contents
-		{
-			get { return this.GetPropertyValue("contents"); }
-		}
 	}
 
 	/// <summary>Image</summary>
@@ -676,48 +550,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Size
-		///</summary>
-		[ImplementPropertyType("umbracoBytes")]
-		public object UmbracoBytes
-		{
-			get { return this.GetPropertyValue("umbracoBytes"); }
-		}
-
-		///<summary>
-		/// Type
-		///</summary>
-		[ImplementPropertyType("umbracoExtension")]
-		public object UmbracoExtension
-		{
-			get { return this.GetPropertyValue("umbracoExtension"); }
-		}
-
-		///<summary>
 		/// Upload image
 		///</summary>
 		[ImplementPropertyType("umbracoFile")]
 		public Umbraco.Web.Models.ImageCropDataSet UmbracoFile
 		{
 			get { return this.GetPropertyValue<Umbraco.Web.Models.ImageCropDataSet>("umbracoFile"); }
-		}
-
-		///<summary>
-		/// Height
-		///</summary>
-		[ImplementPropertyType("umbracoHeight")]
-		public object UmbracoHeight
-		{
-			get { return this.GetPropertyValue("umbracoHeight"); }
-		}
-
-		///<summary>
-		/// Width
-		///</summary>
-		[ImplementPropertyType("umbracoWidth")]
-		public object UmbracoWidth
-		{
-			get { return this.GetPropertyValue("umbracoWidth"); }
 		}
 	}
 
@@ -744,33 +582,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<File, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Size
-		///</summary>
-		[ImplementPropertyType("umbracoBytes")]
-		public object UmbracoBytes
-		{
-			get { return this.GetPropertyValue("umbracoBytes"); }
-		}
-
-		///<summary>
-		/// Type
-		///</summary>
-		[ImplementPropertyType("umbracoExtension")]
-		public object UmbracoExtension
-		{
-			get { return this.GetPropertyValue("umbracoExtension"); }
-		}
-
-		///<summary>
-		/// Upload file
-		///</summary>
-		[ImplementPropertyType("umbracoFile")]
-		public object UmbracoFile
-		{
-			get { return this.GetPropertyValue("umbracoFile"); }
 		}
 	}
 

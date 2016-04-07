@@ -313,6 +313,8 @@
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="App_Browsers\Form.browser" />
     <Content Include="App_Browsers\w3cvalidator.browser" />
+    <None Include="Properties\PublishProfiles\UmbracoMand1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\UmbracoMand1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -810,7 +812,6 @@
     <Content Include="Umbraco\Images\Umbraco\userGroup.gif" />
     <Content Include="Umbraco\Images\Umbraco\userType.gif" />
     <Content Include="Umbraco\installer.html" />
-    <Content Include="Umbraco\Install\Legacy\loadStarterKits.ascx" />
     <Content Include="Umbraco\Js\app.js" />
     <Content Include="Umbraco\Js\canvasdesigner.config.js" />
     <Content Include="Umbraco\Js\canvasdesigner.front.js" />
@@ -2769,9 +2770,6 @@
     <Content Include="Umbraco_Client\Ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="Umbraco_Client\Ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Umbraco_Client\Ui\ui-lightness\jquery-ui.custom.css" />
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Config\UrlRewriting.config" />
     <Content Include="Config\umbracoSettings.config" />
     <Content Include="Config\trees.config" />
@@ -2790,7 +2788,34 @@
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
-    <Content Include="views\**" />
+    <Content Include="views\AboutPage.cshtml" />
+    <Content Include="views\articleItem.cshtml" />
+    <Content Include="views\articlesMain.cshtml" />
+    <Content Include="views\contactPage.cshtml" />
+    <Content Include="views\forbiddenAccess.cshtml" />
+    <Content Include="views\homepage.cshtml" />
+    <Content Include="views\login.cshtml" />
+    <Content Include="views\MacroPartials\ContactForm.cshtml" />
+    <Content Include="views\MacroPartials\fiveNewestCompletedProjectsPartialView.cshtml" />
+    <Content Include="views\MacroPartials\LoginForm.cshtml" />
+    <Content Include="views\MacroPartials\Sitemap.cshtml" />
+    <Content Include="views\Master.cshtml" />
+    <Content Include="views\members.cshtml" />
+    <Content Include="views\Partials\Grid\Bootstrap2.cshtml" />
+    <Content Include="views\Partials\Grid\Bootstrap3.cshtml" />
+    <Content Include="views\Partials\Grid\Editors\Base.cshtml" />
+    <Content Include="views\Partials\Grid\Editors\Embed.cshtml" />
+    <Content Include="views\Partials\Grid\Editors\Macro.cshtml" />
+    <Content Include="views\Partials\Grid\Editors\Media.cshtml" />
+    <Content Include="views\Partials\Grid\Editors\Rte.cshtml" />
+    <Content Include="views\Partials\Grid\Editors\Textstring.cshtml" />
+    <Content Include="views\projectItem.cshtml" />
+    <Content Include="views\projectsMain.cshtml" />
+    <Content Include="views\Shared\_Layout.cshtml" />
+    <Content Include="views\sitemap.cshtml" />
+    <Content Include="views\textPage.cshtml" />
+    <Content Include="views\Web.config" />
+    <Content Include="views\_ViewStart.cshtml" />
     <Content Include="scss\bootstrap-variables.scss" />
     <Content Include="scss\style.scss" />
     <Content Include="scss\custom-variables.scss" />
@@ -2818,8 +2843,6 @@
     <Content Include="Umbraco\assets\less\radius.less" />
     <Content Include="Umbraco\assets\less\shadow.less" />
     <Content Include="Umbraco\assets\less\slider.less" />
-    <Content Include="Umbraco\Install\Views\Index.cshtml" />
-    <Content Include="Umbraco\Install\Views\Web.config" />
     <Content Include="Umbraco\lib\angular-dynamic-locale\tmhDynamicLocale.min.js.map" />
     <Content Include="Umbraco\lib\bootstrap-tabdrop\README.md" />
     <Content Include="Umbraco\lib\bootstrap\less\accordion.less" />
@@ -2920,12 +2943,14 @@
     <Content Include="Umbraco\Webservices\TagsAutoCompleteHandler.ashx" />
     <Content Include="Umbraco\Webservices\TreeDataService.ashx" />
     <Content Include="Umbraco\Webservices\UltimatePickerAutoCompleteHandler.ashx" />
-    <Content Include="Umbraco\Xslt\Web.config" />
-    <Content Include="Views\MacroPartials\Login.cshtml" />
+    <None Include="Umbraco\Xslt\Web.config" />
     <Content Include="Views\forbiddenAccess.cshtml" />
     <Content Include="Views\login.cshtml" />
     <Content Include="Views\members.cshtml" />
     <Content Include="Views\MacroPartials\LoginForm.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2968,7 +2993,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\PetaPeco.cs" />
